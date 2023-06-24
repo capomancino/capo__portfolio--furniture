@@ -1,0 +1,117 @@
+.discount {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  background-color: #9caec9;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 165px;
+
+    @include max-width(1024) {
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: "Dosis", sans-serif;
+    font-weight: 800;
+    font-size: 90px;
+    line-height: 150%;
+    letter-spacing: 0.045em;
+    color: #f3b705;
+    opacity: 0.5;
+
+    @include max-width(475) {
+      font-size: 70px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 133.5%;
+    text-align: center;
+    letter-spacing: 0.045em;
+    color: #264a51;
+    margin: 0 0 15px;
+
+    @include max-width(475) {
+      font-size: 40px;
+      line-height: 1;
+    }
+  }
+
+  &__description {
+    width: 65%;
+    font-family: "Mukta", sans-serif;
+    font-size: 15px;
+    line-height: 172.68%;
+    letter-spacing: 0.045em;
+    text-align: center;
+    color: #335e74;
+    margin: 0 0 24px;
+  }
+
+  &__button {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #264a51;
+      transition: 0.5s ease-in-out;
+    }
+
+    &::before {
+      content: 'View Items';
+      position: absolute;
+      top: 20%;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}

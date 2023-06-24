@@ -1,0 +1,133 @@
+.blog {
+  padding: 50px 0 50px 165px;
+
+  @include max-width(1024) {
+    padding-left: 0;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+
+    @include max-width(1024) {
+      grid-template: auto / auto;
+      gap: 25px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      @include max-width(1024) {
+        margin-bottom: 50px;
+      }
+
+      @include max-width(475) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &--reverse .blog__photo {
+      order: 2;
+
+      @include max-width(1024) {
+        order: 1;
+      }
+    }
+
+    &--reverse .blog__content {
+      order: 1;
+
+      @include max-width(1024) {
+        order: 2;
+      }
+    }
+
+    &--reverse .blog__subtitle {
+      left: 0;
+      transform: translate(-50%, -25%);
+
+      @include max-width(1024) {
+        transform: translate(25px, -25px);
+      }
+    }
+  }
+
+  &__photo {
+    position: relative;
+    place-self: center;
+  }
+
+  &__image {
+    display: flex;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &__subtitle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, -25%);
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0.045em;
+    color: #fff;
+    background-color: rgba(113, 179, 198, 0.85);
+    border-radius: 3px;
+    padding: 5% 0;
+
+    @include max-width(1024) {
+      transform: translate(-25px, -25px);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 40px;
+
+    @include max-width(1024) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+    min-width: 290px;
+    font-family: "Mukta", sans-serif;
+    font-size: 15px;
+    line-height: 170%;
+    letter-spacing: 0.045em;
+    color: #335e74;
+    margin-bottom: 5px;
+
+    @include max-width(1024) {
+      max-width: 75%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background-color: #43717d;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
+  padding: 20px 0 20px 165px;
+
+  @include max-width(1024) {
+    padding-left: 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include max-width(1024) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__button-text {
+
+    @include max-width(1024) {
+      display: none;
+    }
+  }
+
+  &__button-icon {
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+  }
+}

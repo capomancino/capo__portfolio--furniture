@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "scope": "html",
+    "prefix": "ts",
+    "body": [
+      "<span class=\"$0\"></span>"
+    ],
+    "description": "Snippet for span"
+  }
+}

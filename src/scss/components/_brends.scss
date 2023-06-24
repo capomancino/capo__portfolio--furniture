@@ -1,0 +1,24 @@
+.brends {
+  max-width: 100%;
+  background-color: #d2e2ee;
+  padding: 25px 0 25px 165px;
+
+  @include max-width(1024) {
+    padding: 15px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+
+    @include max-width(768) {
+      grid-template:repeat(2, 1fr) / repeat(3, 1fr);
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    place-self: center;
+  }
+}

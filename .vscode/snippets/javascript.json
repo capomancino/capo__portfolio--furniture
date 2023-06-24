@@ -1,0 +1,10 @@
+{
+  "const.querySelector": {
+    "scope": "javascript",
+    "prefix": "cs",
+    "body": [
+      "const $0 = document.querySelector(\".$0\");$1"
+    ],
+    "description": "Snippet for const"
+  }
+}

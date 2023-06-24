@@ -1,0 +1,10 @@
+{
+  "margin: 0 auto": {
+    "scope": "scss",
+    "prefix": "m0a",
+    "body": [
+      "margin: 0 auto;"
+    ],
+    "description": "Snippet for const"
+  }
+}
