@@ -7,4 +7,4 @@
 - Smooth scrolling to each section / Плавная прокрутка к каждому разделу
 - Create a list of email addresses of all subscribers / Создание списка электронных адресов всех подписанных
 
-![preview img](/furniture/src/resources/preview.png)
+![preview img](/src/resources/preview.png)
